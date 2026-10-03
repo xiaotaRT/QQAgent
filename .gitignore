@@ -1,0 +1,45 @@
+# 单文件（用户要求不上传）
+QQAgent_v23.py
+qq_bot.py
+qq_bot_v9*.py
+QQAgent_v20.py
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# 数据与日志
+bot_data/
+*.log
+logs/
+data/
+
+# 环境变量
+.env
+.env.local
+
+# 临时迁移脚本
+migrate_stage*.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+qqagent_v20/
+
+# 临时文件
+.tmp-tool-results/
+*.zip
+build_single.py
+AI_README.md
+TAKEOUT_SETUP.md
+
+# 备份目录（含凭据）
+*.bak/
+*.bak
+qqagent_v20.bak*/
+qqagent_v20.open.bak*/

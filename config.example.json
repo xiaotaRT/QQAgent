@@ -1,0 +1,15 @@
+{
+  "说明": "复制本文件为 config.json，填入你的真实值后启动。也可用环境变量（见 AI_README.md）。",
+  "bot_qq": "机器人QQ号（机器人账号）",
+  "owner_qq": "你的QQ号（管理员/主人）",
+  "napcat_ws_url": "ws://127.0.0.1:3001/onebot/v11/ws",
+  "napcat_access_token": "NapCat 等 OneBot 客户端设置的访问令牌",
+  "api_key": "大模型 API Key（OpenAI 兼容）",
+  "api_url": "https://api.deepseek.com/v1/chat/completions",
+  "model_name": "deepseek-chat",
+  "model_4_api_url": "https://api.deepseek.com/v1/chat/completions",
+  "model_4_api_key": "模型4专用 API Key（可省略，默认同 api_key）",
+  "model_4_model_name": "deepseek-v4-flash",
+  "notify_port": "8765",
+  "notify_secret": "（手机 Tasker 里填同一个值；留空则仅本机可访问）"
+}
