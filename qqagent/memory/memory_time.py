@@ -6627,6 +6627,9 @@ else:
 if CONFIG["modules"].get("memory_enhancement", True):
     memory_gateway = None
     try:
+        from qqagent.behavior.behavior_learn import memory
+        from qqagent.behavior.relations import memory_weight
+
         memory_gateway = MemoryGateway(
             memory_module=memory,
             memory_weight=memory_weight,
@@ -6733,6 +6736,16 @@ habit_formation = HabitFormationSystem()
 
 # _DIRTY_MODULES = { 之后的代码用 try/except 包裹（依赖未迁移实例时跳过）
 try:
+    # 延迟导入 behavior 层的单例实例
+    from qqagent.behavior.trust import trust
+    from qqagent.behavior.psychology import (
+        pouting_module, dark_diary, silent_mode, inner_monologue, regret_module,
+        social_energy, safe_distance, observe_module, group_bystander, newbie_module,
+        late_night, secret_collection, nickname_system, old_account, trigger_recall,
+        conflict_detection, jealousy_module, praise_module, draft_module,
+        self_contradiction, human_like_state, rick_diary,
+    )
+
     _DIRTY_MODULES = {
         "trust": trust,
         "pouting_data": pouting_module,

@@ -2196,6 +2196,25 @@ try:
     # 新增模块实例化
     # ============================================================
 
+    # 延迟导入：这些类定义在 behavior 层，避免循环导入 & 顺序依赖
+    from qqagent.behavior.psychology import (
+        MemoryFragmentModule, RapportModule, WeatherSystem, SeasonAwarenessModule,
+        CreativeWritingModule, EmotionContagionModule, RelationshipGraphModule,
+        RuminationModule, SurpriseGiftModule, ToneEnhancerModule,
+        HabitTrackerModule, ForgettingCurveModule, SpeechMirrorModule,
+        SubtextReaderModule, WaitAnxietyModule, SocialMaskModule, SolitudeModule,
+        SharedMemoryBoostModule, MoodCycleModule, SocialRadarModule,
+        ZeigarnikEffectModule, PeakEndRuleModule, AttachmentTheoryModule,
+        CognitiveDissonanceModule, MaslowHierarchyModule, ImpressionManagementModule,
+        SocialExchangeModule, EmotionRegulationModule, SelfDeterminationModule,
+        BystanderEffectModule, SleepConsolidationModule,
+        InnerVoiceModule, PostReplyRuminationModule, MemoryDistortionModule,
+        SelectiveDisclosureModule, EnhancedJealousyModule, DreamscapeModule,
+        PersonalTasteModule, NostalgiaModule, BiologicalRhythmModule,
+        LanguageFingerprintModule, EmpathyGapModule,
+    )
+    from qqagent.behavior.personality import PersonalityCore
+
     memory_fragment = MemoryFragmentModule()
     rapport = RapportModule()
     weather_system = WeatherSystem(dm=dm)

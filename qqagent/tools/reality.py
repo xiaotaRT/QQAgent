@@ -807,6 +807,8 @@ if (CONFIG["modules"].get("context.tool_gateway", True)
 # ---------- 落盘注册（主程序 flush_dirty_modules 调用） ----------
 # _DIRTY_MODULES["device_registry"] 之后的代码用 try/except 包裹（依赖未迁移时跳过）
 try:
+    from qqagent.memory.memory_time import _DIRTY_MODULES
+
     _DIRTY_MODULES["device_registry"] = context.device_manager
     _DIRTY_MODULES["environment_awareness_data"] = context.environment_hub
     _DIRTY_MODULES["gateway_audit"] = context.tool_gateway
